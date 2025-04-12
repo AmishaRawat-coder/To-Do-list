@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" name="search" name="ser" id="myinput" onkeyup="searchfun()">
+    <table id="mytable" border="2">
+        <tr>
+            <th>name</th>
+            <th>sname</th>
+            <th>mobile</th>
+            <th>city</th>
+        </tr>
+        <tr>
+            <td>ayush</td>
+            <td>rawat</td>
+            <td>469289374</td>
+            <td>neemuch</td>
+        </tr>
+        <tr>
+            <td>piyush</td>
+            <td>meena</td>
+            <td>896927692</td>
+            <td>neemuch</td>
+        </tr>
+        <tr>
+            <td>somya</td>
+            <td>rajput</td>
+            <td>858926349</td>
+            <td>mandsour</td>
+            
+        </tr>
+    </table>
+    <script>
+        function searchfun()
+        {
+            let filter=document.getElementById('myinput').value.toUpperCase();
+            let mytable=document.getElementById('mytable');
+            let tr=mytable.getElementsByTagName('tr');
+            for( var i=0;i<tr.length;i++)
+            {
+                let td=tr[i].getElementsByTagName('td')[0];
+                if('td')
+                {
+                    let taxtvalue=td.textContant || td.innerHTML;
+                    if(textvalue.toUpperCase().indexOf(filter)>-1)
+                    {
+                        tr[i].style.display="";
+
+                    }
+                    else{
+                        tr[i].style.display=none;
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
